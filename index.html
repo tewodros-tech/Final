@@ -6,6 +6,124 @@
   <title>Hayimi Movement</title>
   <link rel="stylesheet" href="style.css" />
   <style>
+    /* Navigation Styling */
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 30px;
+      background: #111;
+      color: #fff;
+    }
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+    .nav-links a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .donate-btn {
+      background: #ff6600;
+      color: #fff;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    /* Hero Banner Styling */
+    .hero-banner {
+      position: relative;
+      height: 100vh;
+      overflow: hidden;
+      background: #000;
+    }
+
+    .video-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      backdrop-filter: blur(8px);
+      background: rgba(0, 0, 0, 0.6);
+      z-index: 1;
+    }
+
+    .hero-video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: 0;
+    }
+
+    .image-slider {
+      position: relative;
+      z-index: 2;
+      width: 100%;
+      overflow: hidden;
+      padding: 20px 0;
+    }
+
+    .slide-track {
+      display: flex;
+      animation: scroll 40s linear infinite;
+    }
+
+    .slide-img {
+      height: 300px;
+      width: auto;
+      margin: 0 10px;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.5);
+      transition: transform 0.3s ease;
+    }
+
+    .slide-img:hover {
+      transform: scale(1.05);
+    }
+
+    @keyframes scroll {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+
+    .hero-overlay {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 3;
+      text-align: center;
+      color: #fff;
+      padding: 20px;
+    }
+
+    .hero-overlay h1 {
+      font-size: 3rem;
+      margin-bottom: 10px;
+    }
+
+    .hero-overlay p {
+      font-size: 1.2rem;
+      margin-bottom: 20px;
+    }
+
+    .cta-btn {
+      background: #ff6600;
+      color: #fff;
+      padding: 12px 24px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
     /* Donation section styling */
     .donation-container {
       max-width: 600px;
@@ -58,6 +176,14 @@
       border-radius: 5px;
       cursor: pointer;
     }
+
+    /* Footer */
+    footer {
+      background: #111;
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+    }
   </style>
 </head>
 <body>
@@ -86,16 +212,14 @@
     <!-- Image Slider -->
     <div class="image-slider">
       <div class="slide-track">
-        <!-- ✅ Fixed: removed 'images/' so it matches your actual file locations -->
-        <img src="Children-One.jpg" alt="Slide 1" class="slide-img" />
-        <img src="Logo.jpg" alt="Slide 2" class="slide-img" />
-        <img src="Gofa.jpg" alt="Slide 3" class="slide-img" />
-        <img src="Childrens.jpg" alt="Slide 4" class="slide-img" />
-        <!-- Repeat for seamless loop -->
-        <img src="Children-One.jpg" alt="Slide 1" class="slide-img" />
-        <img src="Logo.jpg" alt="Slide 2" class="slide-img" />
-        <img src="Gofa.jpg" alt="Slide 3" class="slide-img" />
-        <img src="Childrens.jpg" alt="Slide 4" class="slide-img" />
+        <img src="Children-One.jpg" alt="Slide 1" class="slide-img" loading="lazy" />
+        <img src="Logo.jpg" alt="Slide 2" class="slide-img" loading="lazy" />
+        <img src="Gofa.jpg" alt="Slide 3" class="slide-img" loading="lazy" />
+        <img src="Childrens.jpg" alt="Slide 4" class="slide-img" loading="lazy" />
+        <img src="Children-One.jpg" alt="Slide 1" class="slide-img" loading="lazy" />
+        <img src="Logo.jpg" alt="Slide 2" class="slide-img" loading="lazy" />
+        <img src="Gofa.jpg" alt="Slide 3" class="slide-img" loading="lazy" />
+        <img src="Childrens.jpg" alt="Slide 4" class="slide-img" loading="lazy" />
       </div>
     </div>
 
@@ -113,25 +237,20 @@
     <p>20 million more women may never return to work.</p>
     <p>HayimiMovement.org is ready to keep girls learning during and after the crisis.</p>
 
-    <!-- Donation Container -->
     <div class="donation-container">
-      <!-- One-time / Monthly -->
       <div class="donation-options">
         <button class="donation-type active" data-type="ONE_TIME">ONE TIME</button>
         <button class="donation-type" data-type="MONTHLY">MONTHLY</button>
       </div>
 
-      <!-- Pre-set amounts -->
       <div class="amount-buttons">
         <button class="amount-btn" data-amount="10">$10</button>
         <button class="amount-btn" data-amount="20">$20</button>
         <button class="amount-btn" data-amount="30">$30</button>
       </div>
 
-      <!-- Custom amount -->
       <input type="number" id="custom-amount" class="custom-amount" placeholder="Custom $" min="1" />
 
-      <!-- Payment Options -->
       <div class="payment-section">
         <h3>Pay with PayPal</h3>
         <div id="paypal-button-container"></div>
@@ -146,67 +265,4 @@
 
   <!-- Footer -->
   <footer>
-    <p>&copy; 2025 Hayimi Movement. All rights reserved.</p>
-  </footer>
-
-  <!-- PayPal SDK -->
-  <script src="https://www.paypal.com/sdk/js?client-id=YOUR_PAYPAL_CLIENT_ID&currency=USD"></script>
-  <!-- Stripe SDK -->
-  <script src="https://js.stripe.com/v3/"></script>
-
-  <script>
-    let donationAmount = 10;
-    let donationType = "ONE_TIME";
-
-    document.querySelectorAll('.amount-btn').forEach(btn => {
-      btn.addEventListener('click', () => {
-        donationAmount = parseFloat(btn.dataset.amount);
-        document.getElementById('custom-amount').value = '';
-      });
-    });
-
-    document.getElementById('custom-amount').addEventListener('input', (e) => {
-      donationAmount = parseFloat(e.target.value) || 0;
-    });
-
-    document.querySelectorAll('.donation-type').forEach(btn => {
-      btn.addEventListener('click', () => {
-        document.querySelectorAll('.donation-type').forEach(b => b.classList.remove('active'));
-        btn.classList.add('active');
-        donationType = btn.dataset.type;
-      });
-    });
-
-    // PayPal Buttons
-    paypal.Buttons({
-      createOrder: function(data, actions) {
-        return actions.order.create({
-          purchase_units: [{
-            amount: { value: donationAmount.toFixed(2) },
-            description: `${donationType} donation to Hayimi Movement`
-          }]
-        });
-      },
-      onApprove: function(data, actions) {
-        return actions.order.capture().then(function(details) {
-          alert('Thank you, ' + details.payer.name.given_name + '! Your donation was successful.');
-        });
-      }
-    }).render('#paypal-button-container');
-
-    // Stripe Checkout
-    const stripe = Stripe("YOUR_STRIPE_PUBLISHABLE_KEY");
-    document.getElementById("checkout-button").addEventListener("click", function () {
-      fetch("/create-checkout-session", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ amount: donationAmount, type: donationType })
-      })
-      .then(res => res.json())
-      .then(session => stripe.redirectToCheckout({ sessionId: session.id }))
-      .catch(err => console.error(err));
-    });
-  </script>
-
-</body>
-</html>
+    <p>&copy; 2025 Hayimi Movement. All rights reserved.</p
