@@ -4,7 +4,166 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Programs - Hayimi Movement</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    /* Reset & Base */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #f9f9f9;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    /* Navbar */
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      background: #004d40;
+      color: #fff;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    .navbar .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 1.5rem;
+    }
+    .nav-links a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+    .nav-links a:hover,
+    .nav-links .active {
+      color: #ffcc80;
+    }
+    .donate-btn {
+      background: #ff9800;
+      border: none;
+      padding: 0.6rem 1.2rem;
+      color: #fff;
+      font-weight: bold;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    .donate-btn:hover {
+      background: #e68900;
+    }
+
+    /* Hero Section */
+    .hero {
+      background: url('https://images.unsplash.com/photo-1509099836639-18ba1795216d?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
+      height: 50vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      text-align: center;
+      position: relative;
+    }
+    .hero::after {
+      content: '';
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0,0,0,0.5);
+    }
+    .hero h1 {
+      position: relative;
+      font-size: 2.5rem;
+      z-index: 1;
+    }
+
+    /* Carousel */
+    .carousel {
+      max-width: 1100px;
+      margin: 2rem auto;
+      position: relative;
+      overflow: hidden;
+    }
+    .carousel-track {
+      display: flex;
+      transition: transform 0.5s ease-in-out;
+    }
+    .program-card {
+      min-width: 300px;
+      margin: 0 1rem;
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      padding: 1.5rem;
+      text-align: center;
+      transition: transform 0.3s;
+    }
+    .program-card:hover {
+      transform: translateY(-5px);
+    }
+    .program-card i {
+      font-size: 2.5rem;
+      color: #004d40;
+      margin-bottom: 1rem;
+    }
+    .program-card h3 {
+      margin-bottom: 0.5rem;
+      color: #004d40;
+    }
+    .program-card p {
+      font-size: 0.95rem;
+      color: #555;
+    }
+
+    /* Carousel Buttons */
+    .carousel-btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(0,0,0,0.5);
+      color: #fff;
+      border: none;
+      padding: 0.5rem 1rem;
+      cursor: pointer;
+      border-radius: 50%;
+      font-size: 1.2rem;
+    }
+    .carousel-btn.prev {
+      left: 10px;
+    }
+    .carousel-btn.next {
+      right: 10px;
+    }
+
+    /* Footer */
+    footer {
+      background: #004d40;
+      color: #fff;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 2rem;
+    }
+
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+      }
+      .program-card {
+        min-width: 80%;
+      }
+    }
+  </style>
 </head>
 <body>
 
@@ -21,21 +180,65 @@
     <button class="donate-btn">DONATE</button>
   </nav>
 
-  <!-- Programs Content -->
-  <main class="page-content">
-    <h1>Our Programs</h1>
-    <ul>
-      <li><strong>Education Access:</strong> Scholarships, mentorship, and school supplies for underserved youth.</li>
-      <li><strong>Health Outreach:</strong> Mobile clinics, maternal care, and health awareness campaigns.</li>
-      <li><strong>Women Empowerment:</strong> Vocational training, microfinance, and leadership development.</li>
-      <li><strong>Environmental Stewardship:</strong> Tree planting, clean water access, and sustainable farming.</li>
-    </ul>
-  </main>
+  <!-- Hero -->
+  <section class="hero">
+    <h1>Empowering Communities Through Action</h1>
+  </section>
+
+  <!-- Carousel -->
+  <section class="carousel">
+    <button class="carousel-btn prev"><i class="fas fa-chevron-left"></i></button>
+    <div class="carousel-track">
+      <div class="program-card">
+        <i class="fas fa-graduation-cap"></i>
+        <h3>Education Access</h3>
+        <p>Scholarships, mentorship, and school supplies for underserved youth, building brighter futures.</p>
+      </div>
+      <div class="program-card">
+        <i class="fas fa-heartbeat"></i>
+        <h3>Health Outreach</h3>
+        <p>Mobile clinics, maternal care, and health awareness campaigns reaching remote communities.</p>
+      </div>
+      <div class="program-card">
+        <i class="fas fa-female"></i>
+        <h3>Women Empowerment</h3>
+        <p>Vocational training, microfinance, and leadership development for lasting independence.</p>
+      </div>
+      <div class="program-card">
+        <i class="fas fa-leaf"></i>
+        <h3>Environmental Stewardship</h3>
+        <p>Tree planting, clean water access, and sustainable farming for a greener tomorrow.</p>
+      </div>
+    </div>
+    <button class="carousel-btn next"><i class="fas fa-chevron-right"></i></button>
+  </section>
 
   <!-- Footer -->
   <footer>
     <p>&copy; 2025 Hayimi Movement. All rights reserved.</p>
   </footer>
 
+  <script>
+    const track = document.querySelector('.carousel-track');
+    const prevBtn = document.querySelector('.carousel-btn.prev');
+    const nextBtn = document.querySelector('.carousel-btn.next');
+    let index = 0;
+
+    nextBtn.addEventListener('click', () => {
+      if (index < track.children.length - 1) {
+        index++;
+        track.style.transform = `translateX(-${index * 320}px)`;
+      }
+    });
+
+    prevBtn.addEventListener('click', () => {
+      if (index > 0) {
+        index--;
+        track.style.transform = `translateX(-${index * 320}px)`;
+      }
+    });
+  </script>
+
 </body>
 </html>
+
