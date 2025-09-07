@@ -1,183 +1,301 @@
-/* ================================
-   GLOBAL RESET & BASE STYLES
-================================ */
-* {
-  margin: 0;
-  padding: 0;
+:root {
+  --primary-dark: #0b1e3a;
+  --accent: #ff6600;
+  --light-bg: #f4f6fa;
+  --text-primary: #213047;
+  --text-muted: #64707d;
+  --white: #fff;
+}
+
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
 body {
-  font-family: 'Segoe UI', sans-serif;
-  background-color: #f4f4f4;
-  color: #333;
+  margin: 0;
+  font-family: 'Open Sans', sans-serif;
+  background: var(--light-bg);
+  color: var(--text-primary);
   line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-/* ================================
-   HEADER & NAVIGATION
-================================ */
-
-/* Header with exact HI•ME logo background color */
-.header {
-  background-color: #0b1e3a; /* Deep blue from logo */
-  color: white;
-  padding: 1rem 2rem;
-}
-
-/* Navigation bar layout */
+/* Navbar */
 .navbar {
+  background: var(--primary-dark);
   display: flex;
   justify-content: space-between;
   align-items: center;
-  flex-wrap: wrap;
+  padding: 0.75rem 1.5rem;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
 }
 
-/* Flat logo styling */
 .logo img {
-  height: 60px;
-  object-fit: contain;
-  background: none;
-  border: none;
-  box-shadow: none;
+  height: 50px;
+  width: auto;
 }
 
-/* Navigation links in a horizontal row */
 .nav-links {
-  display: flex;
-  gap: 1rem;
   list-style: none;
+  display: flex;
+  gap: 1.4rem;
 }
 
-.nav-links li a {
-  color: #fff;
+.nav-links a {
+  color: var(--white);
   text-decoration: none;
-  padding: 0.5rem 1rem;
-  font-weight: 500;
-  text-shadow: 0 0 5px rgba(0,0,0,0.5);
+  font-weight: 600;
+  font-family: 'Poppins', sans-serif;
+  padding: 0.4rem 0.8rem;
+  border-radius: 5px;
   transition: background 0.3s ease;
 }
 
-.nav-links li a:hover,
-.nav-links li a.active {
-  background-color: #ff6600;
-  border-radius: 5px;
+.nav-links a:hover,
+.nav-links a.active {
+  background: var(--accent);
 }
 
-/* Donate button styling */
 .donate-btn {
-  background-color: #ff6600;
-  color: white;
+  background: var(--accent);
+  color: var(--primary-dark);
+  font-weight: 700;
   padding: 0.5rem 1.2rem;
-  border-radius: 5px;
-  text-decoration: none;
-  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
   transition: background 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
 }
 
 .donate-btn:hover {
-  background-color: #e65c00;
+  background: #e65c00;
 }
 
-/* ================================
-   HERO SECTION
-================================ */
-
-/* Fullscreen hero section with background image */
+/* Hero */
 .hero {
   position: relative;
-  height: 100vh;
-  background: url('Image1.jpg') center/cover no-repeat;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
+  height: 90vh;
+  max-height: 720px;
+  padding: 0 1.25rem;
+  background:
+    linear-gradient(to bottom, rgba(11, 30, 58, 0.7) 0%, rgba(11, 30, 58, 0.85) 100%),
+    url('Image1.jpg') center/cover no-repeat;
+  color: var(--white);
   text-align: center;
-  color: white;
-}
-
-/* Overlay for readability */
-.hero-overlay {
-  position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.5);
-}
-
-/* Hero content */
-.hero-content {
-  position: relative;
-  z-index: 1;
-  max-width: 700px;
-  padding: 2rem;
+  font-family: 'Poppins', sans-serif;
 }
 
 .hero h1 {
-  font-size: 3rem;
+  font-size: clamp(2rem, 5vw, 3.5rem);
   margin-bottom: 1rem;
+  letter-spacing: 1.3px;
+  font-weight: 700;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.7);
 }
 
 .hero p {
-  font-size: 1.2rem;
+  font-size: clamp(1rem, 2.5vw, 1.4rem);
   margin-bottom: 2rem;
+  text-shadow: 0 1px 5px rgba(0, 0, 0, 0.6);
 }
 
-/* Learn More button */
 .learn-btn {
-  background: #fff;
-  color: #ff6600;
-  padding: 0.75rem 1.5rem;
-  border-radius: 5px;
+  font-weight: 600;
+  font-family: 'Poppins', sans-serif;
+  padding: 0.8rem 2rem;
+  background: var(--accent);
+  color: var(--primary-dark);
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
   text-decoration: none;
-  font-weight: bold;
+  box-shadow: 0 4px 8px rgba(255, 102, 0, 0.6);
   transition: background 0.3s ease;
 }
 
 .learn-btn:hover {
-  background: #ff6600;
-  color: white;
+  background: #e65c00;
 }
 
-/* ================================
-   FOOTER
-================================ */
+/* Section: About and Programs */
+.about-section,
+.programs-section {
+  max-width: 960px;
+  margin: 3rem auto;
+  padding: 0 1rem;
+}
 
-.footer {
-  background-color: #111;
-  color: #ccc;
-  padding: 2rem;
+.about-section h1,
+.programs-section h1 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-size: 2.4rem;
+  margin-bottom: 0.8rem;
+  color: var(--primary-dark);
   text-align: center;
 }
 
-.footer-content {
-  max-width: 800px;
-  margin: auto;
+.about-section h2 {
+  font-family: 'Poppins', sans-serif;
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+  color: var(--primary-dark);
+}
+
+.about-section p,
+.programs-section p {
+  font-size: 1.1rem;
+  color: var(--text-muted);
+  max-width: 700px;
+  margin: 0.3rem auto 1.2rem;
+  text-align: center;
+}
+
+.about-section ul {
+  max-width: 400px;
+  margin: 0 auto;
+  list-style-type: none;
+  padding-left: 0;
+  font-size: 1.2rem;
+  color: var(--accent);
+}
+
+.about-section ul li {
+  margin: 0.6rem 0;
+}
+
+/* Programs cards */
+.program-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-top: 2rem;
+  justify-content: center;
+}
+
+.program-card {
+  background: var(--white);
+  padding: 1.5rem;
+  border-radius: 16px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+  max-width: 320px;
+  flex: 1 1 280px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.3s ease;
+}
+
+.program-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+}
+
+.program-card .icon {
+  font-size: 2.6rem;
+  color: var(--accent);
+  margin-bottom: 1rem;
+}
+
+.program-card h3 {
+  font-family: 'Poppins', sans-serif;
+  margin-bottom: 0.8rem;
+  color: var(--primary-dark);
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.program-card p {
+  color: var(--text-muted);
+  font-size: 1rem;
+  text-align: center;
+}
+
+/* Gallery */
+.gallery {
+  max-width: 960px;
+  margin: 3rem auto;
+  padding: 0 1rem;
+  text-align: center;
+}
+
+.gallery h1 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-size: 2.4rem;
+  margin-bottom: 2rem;
+  color: var(--primary-dark);
+}
+
+.gallery-grid {
+  display: grid;
+  gap: 1.25rem;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  justify-items: center;
+}
+
+.gallery-grid img {
+  width: 100%;
+  max-width: 320px;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.gallery-grid img:hover {
+  transform: scale(1.04);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* Footer */
+.footer {
+  background-color: var(--primary-dark);
+  color: var(--white);
+  padding: 2rem 1rem;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+.social-icons {
+  margin-top: 1rem;
 }
 
 .social-icons a {
-  color: #ccc;
+  color: var(--white);
   margin: 0 0.5rem;
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   transition: color 0.3s ease;
 }
 
 .social-icons a:hover {
-  color: #ff6600;
+  color: var(--accent);
 }
 
-/* ================================
-   RESPONSIVE DESIGN
-================================ */
-
+/* Responsive */
 @media (max-width: 768px) {
-  .hero h1 {
-    font-size: 2rem;
+  .nav-links {
+    gap: 0.8rem;
   }
 
-  .nav-links {
-    flex-direction: column;
+  .navbar {
+    flex-wrap: wrap;
     gap: 0.5rem;
   }
 
-  .logo img {
-    height: 50px;
+  .program-cards {
+    flex-direction: column;
+    align-items: center;
   }
 }
