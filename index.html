@@ -4,265 +4,63 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Hayimi Movement</title>
-  <link rel="stylesheet" href="style.css" />
-  <style>
-    /* Navigation Styling */
-    .navbar {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 15px 30px;
-      background: #111;
-      color: #fff;
-    }
-    .nav-links {
-      list-style: none;
-      display: flex;
-      gap: 20px;
-    }
-    .nav-links a {
-      color: #fff;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    .donate-btn {
-      background: #ff6600;
-      color: #fff;
-      padding: 10px 20px;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-    }
-
-    /* Hero Banner Styling */
-    .hero-banner {
-      position: relative;
-      height: 100vh;
-      overflow: hidden;
-      background: #000;
-    }
-
-    .video-overlay {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      backdrop-filter: blur(8px);
-      background: rgba(0, 0, 0, 0.6);
-      z-index: 1;
-    }
-
-    .hero-video {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      z-index: 0;
-    }
-
-    .image-slider {
-      position: relative;
-      z-index: 2;
-      width: 100%;
-      overflow: hidden;
-      padding: 20px 0;
-    }
-
-    .slide-track {
-      display: flex;
-      animation: scroll 40s linear infinite;
-    }
-
-    .slide-img {
-      height: 300px;
-      width: auto;
-      margin: 0 10px;
-      border-radius: 10px;
-      box-shadow: 0 0 15px rgba(0,0,0,0.5);
-      transition: transform 0.3s ease;
-    }
-
-    .slide-img:hover {
-      transform: scale(1.05);
-    }
-
-    @keyframes scroll {
-      0% { transform: translateX(0); }
-      100% { transform: translateX(-50%); }
-    }
-
-    .hero-overlay {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      z-index: 3;
-      text-align: center;
-      color: #fff;
-      padding: 20px;
-    }
-
-    .hero-overlay h1 {
-      font-size: 3rem;
-      margin-bottom: 10px;
-    }
-
-    .hero-overlay p {
-      font-size: 1.2rem;
-      margin-bottom: 20px;
-    }
-
-    .cta-btn {
-      background: #ff6600;
-      color: #fff;
-      padding: 12px 24px;
-      border-radius: 6px;
-      text-decoration: none;
-      font-weight: bold;
-    }
-
-    /* Donation section styling */
-    .donation-container {
-      max-width: 600px;
-      margin: 30px auto;
-      padding: 20px;
-      border: 1px solid #ddd;
-      border-radius: 8px;
-      background: #fff;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    }
-    .donation-options, .amount-buttons {
-      display: flex;
-      justify-content: center;
-      margin-bottom: 15px;
-    }
-    .donation-options button, .amount-buttons button {
-      margin: 0 5px;
-      padding: 10px 20px;
-      border: none;
-      cursor: pointer;
-      border-radius: 5px;
-    }
-    .donation-options .active {
-      background: #0070ba;
-      color: #fff;
-    }
-    .amount-buttons button {
-      border: 1px solid #0070ba;
-      background: #fff;
-    }
-    .custom-amount {
-      display: block;
-      margin: 10px auto;
-      padding: 10px;
-      width: 100px;
-      text-align: center;
-    }
-    .payment-section {
-      margin-top: 20px;
-    }
-    #paypal-button-container, #stripe-button {
-      margin-top: 15px;
-      text-align: center;
-    }
-    #stripe-button button {
-      background: #635bff;
-      color: #fff;
-      padding: 10px 20px;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-    }
-
-    /* Footer */
-    footer {
-      background: #111;
-      color: #fff;
-      text-align: center;
-      padding: 20px;
-    }
-  </style>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-
-  <!-- Navigation -->
-  <nav class="navbar">
-    <div class="logo">Hayimi Movement</div>
-    <ul class="nav-links">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="programs.html">Programs</a></li>
-      <li><a href="gallery.html">Gallery</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-    <button class="donate-btn" onclick="document.getElementById('donate').scrollIntoView({behavior:'smooth'})">DONATE</button>
-  </nav>
-
-  <!-- Hero Section -->
-  <header class="hero-banner">
-    <div class="video-overlay"></div>
-    <video autoplay muted loop class="hero-video">
-      <source src="videos/impact.mp4" type="video/mp4" />
-      Your browser does not support the video tag.
-    </video>
-
-    <!-- Image Slider -->
-    <div class="image-slider">
-      <div class="slide-track">
-        <img src="Children-One.jpg" alt="Slide 1" class="slide-img" loading="lazy" />
-        <img src="Logo.jpg" alt="Slide 2" class="slide-img" loading="lazy" />
-        <img src="Gofa.jpg" alt="Slide 3" class="slide-img" loading="lazy" />
-        <img src="Childrens.jpg" alt="Slide 4" class="slide-img" loading="lazy" />
-        <img src="Children-One.jpg" alt="Slide 1" class="slide-img" loading="lazy" />
-        <img src="Logo.jpg" alt="Slide 2" class="slide-img" loading="lazy" />
-        <img src="Gofa.jpg" alt="Slide 3" class="slide-img" loading="lazy" />
-        <img src="Childrens.jpg" alt="Slide 4" class="slide-img" loading="lazy" />
-      </div>
-    </div>
-
-    <!-- Overlay Text and CTA -->
-    <div class="hero-overlay">
-      <h1>Empowering Communities</h1>
-      <p>Join us in creating lasting change.</p>
-      <a href="#donate" class="cta-btn">Donate Now</a>
+  <header class="hero">
+    <h1>Empowering Communities Through Culture, Compassion & Connectivity</h1>
+    <p>Hayimi Movement uplifts Ethiopian voices and drives change through digital storytelling, support, and action.</p>
+    <div class="hero-buttons">
+      <a href="#donate" class="btn-primary">Donate Today</a>
+      <a href="#volunteer" class="btn-secondary">Volunteer</a>
     </div>
   </header>
 
-  <!-- Mission & Donation Section -->
-  <section class="mission fade-in" id="donate">
-    <h2>Pandemic Toll on Women Who Work</h2>
-    <p>20 million more women may never return to work.</p>
-    <p>HayimiMovement.org is ready to keep girls learning during and after the crisis.</p>
-
-    <div class="donation-container">
-      <div class="donation-options">
-        <button class="donation-type active" data-type="ONE_TIME">ONE TIME</button>
-        <button class="donation-type" data-type="MONTHLY">MONTHLY</button>
-      </div>
-
-      <div class="amount-buttons">
-        <button class="amount-btn" data-amount="10">$10</button>
-        <button class="amount-btn" data-amount="20">$20</button>
-        <button class="amount-btn" data-amount="30">$30</button>
-      </div>
-
-      <input type="number" id="custom-amount" class="custom-amount" placeholder="Custom $" min="1" />
-
-      <div class="payment-section">
-        <h3>Pay with PayPal</h3>
-        <div id="paypal-button-container"></div>
-
-        <h3>Or Pay with Card (Stripe)</h3>
-        <div id="stripe-button">
-          <button id="checkout-button">Donate with Card</button>
-        </div>
-      </div>
+  <section class="services">
+    <h2>Our Services</h2>
+    <div class="card-grid">
+      <div class="card">🌍 Digital Advocacy</div>
+      <div class="card">🎨 Cultural Storytelling</div>
+      <div class="card">🤝 Youth Empowerment</div>
+      <div class="card">📅 Community Events</div>
+      <div class="card">📱 Mobile Outreach</div>
+      <div class="card">💬 Volunteer Coordination</div>
     </div>
   </section>
 
-  <!-- Footer -->
+  <section class="impact">
+    <h2>2025 Impact</h2>
+    <ul>
+      <li><strong>3,200+</strong> Website Visitors</li>
+      <li><strong>120+</strong> Donations Received</li>
+      <li><strong>75+</strong> Volunteers Engaged</li>
+    </ul>
+  </section>
+
+  <section class="events">
+    <h2>Upcoming Events</h2>
+    <ul>
+      <li><strong>Sep 20:</strong> Youth Empowerment Workshop</li>
+      <li><strong>Oct 5:</strong> Cultural Night Fundraiser</li>
+    </ul>
+  </section>
+
+  <section class="message">
+    <h2>From Our Founder</h2>
+    <p>“Hayimi is more than a movement—it’s a heartbeat of hope, unity, and purpose. Together, we build a future where every story matters.”</p>
+    <p><strong>— Tewodros, Co-Founder</strong></p>
+  </section>
+
   <footer>
-    <p>&copy; 2025 Hayimi Movement. All rights reserved.</p
+    <div class="footer-content">
+      <p>&copy; 2025 Hayimi Movement. All rights reserved.</p>
+      <nav>
+        <a href="#about">About</a>
+        <a href="#donate">Donate</a>
+        <a href="#volunteer">Volunteer</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </footer>
+</body>
+</html>
