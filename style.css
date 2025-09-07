@@ -1,4 +1,4 @@
-/* style.css */
+/* Base styles */
 body {
   margin: 0;
   font-family: 'Open Sans', sans-serif;
@@ -6,19 +6,22 @@ body {
   color: #333;
 }
 
+/* Navigation bar */
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #e4572e;
+  background-color: #0072c6; /* Changed from orange to Hayimi blue */
   padding: 10px 20px;
   flex-wrap: wrap;
 }
 
+/* Logo image */
 .logo img {
   height: 50px;
 }
 
+/* Navigation links */
 .nav-links {
   list-style: none;
   display: flex;
@@ -31,14 +34,16 @@ body {
   font-weight: bold;
 }
 
+/* Active link and donate button styling */
 .nav-links a.active,
 .donate-btn {
   background-color: white;
-  color: #e4572e;
+  color: #0072c6; /* Blue text on white background */
   padding: 6px 12px;
   border-radius: 4px;
 }
 
+/* Mobile menu toggle button */
 .menu-toggle {
   display: none;
   font-size: 24px;
@@ -47,37 +52,50 @@ body {
   color: white;
 }
 
+/* Hero section */
 .hero {
   text-align: center;
   padding: 60px 20px;
   background: url('hero-bg.jpg') center/cover no-repeat;
   color: white;
-  background-color: #000000a0;
+  background-color: #000000a0; /* Overlay for readability */
 }
 
+/* Learn More button */
 .learn-btn {
   display: inline-block;
   margin-top: 20px;
   padding: 12px 24px;
-  background-color: #e4572e;
+  background-color: #0072c6; /* Changed from orange to blue */
   color: white;
   text-decoration: none;
   border-radius: 4px;
 }
 
+.learn-btn:hover {
+  background-color: #005fa3; /* Darker blue on hover */
+}
+
+/* Footer styles */
 .footer {
-  background-color: #e4572e;
+  background-color: #0072c6; /* Changed from orange to blue */
   color: white;
   text-align: center;
   padding: 20px;
 }
 
+/* Social media icons */
 .social-icons a {
   margin: 0 10px;
   color: white;
   font-size: 18px;
 }
 
+.social-icons a:hover {
+  color: #aad4ff; /* Light blue hover effect */
+}
+
+/* Content sections */
 .about-section,
 .page-content,
 .gallery {
@@ -86,6 +104,7 @@ body {
   margin: auto;
 }
 
+/* Gallery grid layout */
 .gallery-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -98,6 +117,7 @@ body {
   box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
 
+/* Contact layout */
 .contact-wrapper {
   display: flex;
   flex-wrap: wrap;
@@ -110,6 +130,7 @@ body {
   min-width: 280px;
 }
 
+/* Contact form fields */
 .contact-form input,
 .contact-form textarea {
   width: 100%;
@@ -120,9 +141,10 @@ body {
   border-radius: 4px;
 }
 
+/* Contact form button */
 .contact-form button {
   padding: 12px;
-  background-color: #e4572e;
+  background-color: #0072c6; /* Changed from orange to blue */
   color: white;
   border: none;
   border-radius: 4px;
@@ -130,15 +152,16 @@ body {
 }
 
 .contact-form button:hover {
-  background-color: #c9441f;
+  background-color: #005fa3; /* Darker blue on hover */
 }
 
+/* Responsive styles for mobile */
 @media (max-width: 768px) {
   .nav-links {
     display: none;
     flex-direction: column;
     width: 100%;
-    background-color: #e4572e;
+    background-color: #0072c6; /* Mobile menu background in blue */
   }
 
   .nav-links.show {
