@@ -1,5 +1,5 @@
 /* ================================
-   Base Reset & Global Styles
+   GLOBAL RESET & BASE STYLES
 ================================ */
 * {
   margin: 0;
@@ -15,44 +15,51 @@ body {
 }
 
 /* ================================
-   Navigation Bar
+   NAVIGATION BAR
 ================================ */
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: rgba(0, 0, 0, 0.85);
-  backdrop-filter: blur(6px);
+  background: #000; /* Solid black background */
   padding: 1rem 2rem;
   position: sticky;
   top: 0;
   z-index: 1000;
 }
 
+/* Logo image styling */
 .logo img {
-  height: 50px;
+  height: 48px;
+  object-fit: contain;
+  filter: brightness(0) invert(1); /* Makes light logos pop on dark backgrounds */
+  margin-right: 1rem;
 }
 
+/* Navigation links layout */
 .nav-links {
   display: flex;
+  gap: 1rem;
   list-style: none;
 }
 
+/* Individual link styling */
 .nav-links li a {
-  color: white;
+  color: #fff;
   text-decoration: none;
   padding: 0.5rem 1rem;
-  margin-left: 1rem;
-  border-radius: 5px;
+  font-weight: 500;
   transition: background 0.3s ease;
 }
 
+/* Active and hover states */
 .nav-links li a:hover,
 .nav-links li a.active {
   background-color: #ff6600;
+  border-radius: 5px;
 }
 
-/* Donate Button */
+/* Donate button styling */
 .donate-btn {
   background-color: #ff6600;
   color: white;
@@ -68,7 +75,7 @@ body {
 }
 
 /* ================================
-   Hero Section (Homepage)
+   HERO SECTION (Homepage)
 ================================ */
 .hero {
   position: relative;
@@ -81,12 +88,14 @@ body {
   color: white;
 }
 
+/* Dark overlay for readability */
 .hero-overlay {
   position: absolute;
   inset: 0;
   background: rgba(0, 0, 0, 0.5);
 }
 
+/* Content inside hero */
 .hero-content {
   position: relative;
   z-index: 1;
@@ -104,6 +113,7 @@ body {
   margin-bottom: 2rem;
 }
 
+/* Learn More button */
 .learn-btn {
   background: #fff;
   color: #ff6600;
@@ -120,7 +130,7 @@ body {
 }
 
 /* ================================
-   Hero Section (About Page)
+   HERO SECTION (About Page)
 ================================ */
 .hero-about {
   background: linear-gradient(to right, rgba(255, 102, 0, 0.85), rgba(255, 153, 102, 0.85)),
@@ -142,7 +152,7 @@ body {
 }
 
 /* ================================
-   About Section
+   ABOUT SECTION
 ================================ */
 .about-section {
   padding: 3rem 2rem;
@@ -161,7 +171,7 @@ body {
 }
 
 /* ================================
-   Gallery Page
+   GALLERY PAGE
 ================================ */
 .gallery {
   padding: 3rem 2rem;
@@ -175,12 +185,14 @@ body {
   color: #2575fc;
 }
 
+/* Grid layout for images */
 .gallery-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 1.5rem;
 }
 
+/* Image styling */
 .gallery-grid img {
   width: 100%;
   height: auto;
@@ -194,7 +206,7 @@ body {
 }
 
 /* ================================
-   Contact Page
+   CONTACT PAGE
 ================================ */
 .page-content {
   padding: 2rem;
@@ -225,6 +237,7 @@ body {
   font-size: 1rem;
 }
 
+/* Form layout */
 .contact-form form {
   display: flex;
   flex-direction: column;
@@ -244,6 +257,7 @@ body {
   font-size: 1rem;
 }
 
+/* Submit button */
 .contact-form button {
   margin-top: 1.5rem;
   background-color: #ff6600;
@@ -260,6 +274,7 @@ body {
   background-color: #e65c00;
 }
 
+/* Map styling */
 .map {
   margin-top: 2rem;
   border-radius: 8px;
@@ -268,7 +283,7 @@ body {
 }
 
 /* ================================
-   Footer
+   FOOTER
 ================================ */
 .footer {
   background-color: #111;
@@ -294,13 +309,10 @@ body {
 }
 
 /* ================================
-   Responsive Design
+   RESPONSIVE DESIGN
 ================================ */
 @media (max-width: 768px) {
-  .hero h1 {
-    font-size: 2rem;
-  }
-
+  .hero h1,
   .hero-about h1 {
     font-size: 2rem;
   }
