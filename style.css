@@ -1,214 +1,96 @@
- /* ✅ Base Styles */
 body {
   margin: 0;
   font-family: 'Segoe UI', sans-serif;
-  background-color: #fff;
+  line-height: 1.6;
+  background: #f9f9f9;
   color: #333;
 }
 
-a {
-  text-decoration: none;
-  color: inherit;
-}
-
-/* ✅ Navigation */
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem 2rem;
-  background-color: #fff;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-}
-
-.logo {
-  font-size: 1.5rem;
-  font-weight: bold;
-  font-family: 'Georgia', serif;
-}
-
-.nav-links {
-  list-style: none;
-  display: flex;
-  gap: 1.5rem;
-}
-
-.nav-links li a {
-  font-weight: 500;
-  color: #333;
-}
-
-.donate-btn {
-  background-color: #f4a261;
+.hero {
+  background: linear-gradient(to right, #6a11cb, #2575fc);
   color: white;
-  border: none;
-  padding: 0.5rem 1rem;
-  border-radius: 5px;
-  font-weight: bold;
-  cursor: pointer;
-}
-
-/* ✅ Mobile Menu Toggle (hidden by default) */
-.menu-toggle {
-  display: none;
-  font-size: 1.8rem;
-  cursor: pointer;
-  color: #333;
-}
-
-/* ✅ Hero Section */
-.hero-banner {
-  position: relative;
-  height: 80vh;
-  overflow: hidden;
-}
-
-.hero-video {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.video-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0,0,0,0.4);
-  z-index: 1;
-}
-
-.hero-overlay {
-  position: absolute;
-  z-index: 3;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
   text-align: center;
-  color: white;
+  padding: 4rem 2rem;
 }
 
-.hero-overlay h1 {
-  font-size: 3rem;
-  font-family: 'Georgia', serif;
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
 }
 
-.hero-overlay p {
+.hero-buttons {
+  margin-top: 2rem;
+}
+
+.btn-primary,
+.btn-secondary {
+  padding: 0.75rem 1.5rem;
+  margin: 0.5rem;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.btn-primary {
+  background: #fff;
+  color: #2575fc;
+}
+
+.btn-secondary {
+  background: transparent;
+  border: 2px solid #fff;
+  color: #fff;
+}
+
+.services {
+  padding: 3rem 2rem;
+  background: #fff;
+  text-align: center;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.card {
+  background: #e3e3e3;
+  padding: 1.5rem;
+  border-radius: 8px;
+  font-weight: bold;
+}
+
+.impact,
+.events,
+.message {
+  padding: 2rem;
+  text-align: center;
+}
+
+.impact ul,
+.events ul {
+  list-style: none;
+  padding: 0;
+}
+
+.impact li,
+.events li {
+  margin: 1rem 0;
   font-size: 1.2rem;
 }
 
-.cta-btn {
-  display: inline-block;
-  margin-top: 1rem;
-  background-color: #f4a261;
-  color: white;
-  padding: 0.75rem 1.5rem;
-  border-radius: 5px;
-  font-weight: bold;
-}
-
-/* ✅ Image Slider Styles */
-.image-slider {
-  position: absolute;
-  bottom: 10%;
-  left: 0;
-  width: 100%;
-  overflow: hidden;
-  z-index: 2;
-  height: 120px;
-}
-
-.slide-track {
-  display: flex;
-  width: calc(250px * 8);
-  animation: scroll 30s linear infinite;
-}
-
-.slide-img {
-  width: 250px;
-  height: 120px;
-  object-fit: cover;
-  margin-right: 20px;
-  border-radius: 8px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
-}
-
-/* ✅ Slide Animation */
-@keyframes scroll {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
-}
-
-/* ✅ Mission Section */
-.mission {
-  padding: 3rem 2rem;
-  text-align: center;
-}
-
-.donation-card {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 1rem;
-  padding: 2rem;
-  margin: 2rem auto;
-  max-width: 400px;
-  background-color: #fff;
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-}
-
-.donation-options {
-  display: flex;
-  gap: 1rem;
-}
-
-.donation-type {
-  padding: 0.75rem 1.5rem;
-  border: 2px solid #f4a261;
-  background-color: white;
-  color: #333;
-  font-weight: bold;
-  cursor: pointer;
-  border-radius: 5px;
-}
-
-.donation-type.active {
-  background-color: #f4a261;
-  color: white;
-}
-
-.donation-amount {
-  width: 100%;
-  padding: 0.75rem;
-  font-size: 1rem;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-}
-
-.continue-btn {
-  padding: 0.75rem 2rem;
-  background-color: #f4a261;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  font-weight: bold;
-  cursor: pointer;
-}
-
-/* ✅ Footer */
 footer {
-  padding: 1rem;
+  background: #333;
+  color: #fff;
+  padding: 2rem;
   text-align: center;
-  background-color: #fff;
-  border-top[43dcd9a7-70db-4a1f-b0ae-981daa162054](https://github.com/lzh-yi/Web-Fork-/tree/024b3e55587afdf9f05a677613a75f24e3d1803e/03-CSS%E8%BF%9B%E9%98%B6%2F04-%E5%A6%82%E4%BD%95%E8%AE%A9%E4%B8%80%E4%B8%AA%E5%85%83%E7%B4%A0%E6%B0%B4%E5%B9%B3%E5%9E%82%E7%9B%B4%E5%B1%85%E4%B8%AD%EF%BC%9F.md?citationMarker=43dcd9a7-70db-4a1f-b0ae-981daa162054 "1")[43dcd9a7-70db-4a1f-b0ae-981daa162054](https://github.com/muhammadputradermawan/vclass/tree/28f640bb0a74f0a435b0f355491208e7b2c11444/application%2Fviews%2Fuser2%2Findex.php?citationMarker=43dcd9a7-70db-4a1f-b0ae-981daa162054 "2")[43dcd9a7-70db-4a1f-b0ae-981daa162054](https://github.com/markozugic/wp-themes/tree/cee414632a0f4d117616984eb614e0a539622477/wp-content%2Fthemes%2Fskrozzzfit%2Fheader.php?citationMarker=43dcd9a7-70db-4a1f-b0ae-981daa162054 "3")[43dcd9a7-70db-4a1f-b0ae-981daa162054](https://github.com/Baba-Muizz/abusolg/tree/f7d5c75a97d4597638ac4daad97b98e9cdea43f3/news.php?citationMarker=43dcd9a7-70db-4a1f-b0ae-981daa162054 "4")
-  
-  
-  
+}
 
-
-  
-
-
-  
+footer nav a {
+  color: #fff;
+  margin: 0 1rem;
+  text-decoration: none;
+}
