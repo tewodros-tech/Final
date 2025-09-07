@@ -18,15 +18,15 @@ body {
    HEADER & NAVIGATION
 ================================ */
 
-/* Header container with dark background */
+/* Header container with deep blue gradient background */
 .header {
-  background-color: #000;
+  background: linear-gradient(to right, #0a1f3d, #1e3a5f);
   color: white;
 }
 
-/* Logo banner with background image (hand + heart) */
+/* Logo banner with background image and gradient */
 .logo-banner {
-  background-color: #000;
+  background: linear-gradient(to right, #0a1f3d, #1e3a5f);
   background-image: url('Logo.jpg'); /* Replace with your actual logo file */
   background-repeat: no-repeat;
   background-position: center right;
