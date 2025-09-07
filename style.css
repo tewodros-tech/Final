@@ -1,96 +1,146 @@
-body {
+/* Reset and Base Styles */
+* {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
   font-family: 'Segoe UI', sans-serif;
-  line-height: 1.6;
-  background: #f9f9f9;
+  background-color: #f4f4f4;
   color: #333;
 }
 
-.hero {
-  background: linear-gradient(to right, #6a11cb, #2575fc);
-  color: white;
-  text-align: center;
-  padding: 4rem 2rem;
+/* Navigation Bar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #fff;
+  padding: 1rem 2rem;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
-.hero h1 {
+.logo {
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: #2575fc;
+}
+
+nav a.nav-btn {
+  margin-left: 1rem;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  color: #2575fc;
+  border: 2px solid #2575fc;
+  transition: all 0.3s ease;
+}
+
+nav a.nav-btn:hover {
+  background-color: #2575fc;
+  color: #fff;
+}
+
+nav a.donate {
+  background: #e63946;
+  color: white;
+  border: none;
+}
+
+/* Hero Banner */
+.banner {
+  position: relative;
+  height: 85vh;
+  background: url('banner.jpg') center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+}
+
+.banner-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.banner-content {
+  position: relative;
+  z-index: 1;
+  max-width: 600px;
+  padding: 2rem;
+}
+
+.banner h1 {
   font-size: 2.5rem;
   margin-bottom: 1rem;
 }
 
-.hero-buttons {
-  margin-top: 2rem;
+.banner p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
 }
 
-.btn-primary,
-.btn-secondary {
-  padding: 0.75rem 1.5rem;
-  margin: 0.5rem;
-  border: none;
-  border-radius: 5px;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-.btn-primary {
+.learn-btn {
   background: #fff;
   color: #2575fc;
-}
-
-.btn-secondary {
-  background: transparent;
-  border: 2px solid #fff;
-  color: #fff;
-}
-
-.services {
-  padding: 3rem 2rem;
-  background: #fff;
-  text-align: center;
-}
-
-.card-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  gap: 1rem;
-  margin-top: 2rem;
-}
-
-.card {
-  background: #e3e3e3;
-  padding: 1.5rem;
-  border-radius: 8px;
-  font-weight: bold;
-}
-
-.impact,
-.events,
-.message {
-  padding: 2rem;
-  text-align: center;
-}
-
-.impact ul,
-.events ul {
-  list-style: none;
-  padding: 0;
-}
-
-.impact li,
-.events li {
-  margin: 1rem 0;
-  font-size: 1.2rem;
-}
-
-footer {
-  background: #333;
-  color: #fff;
-  padding: 2rem;
-  text-align: center;
-}
-
-footer nav a {
-  color: #fff;
-  margin: 0 1rem;
+  padding: 0.75rem 1.5rem;
   text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+  transition: background 0.3s ease;
+}
+
+.learn-btn:hover {
+  background: #2575fc;
+  color: #fff;
+}
+
+/* Donation CTA */
+.cta {
+  text-align: center;
+  padding: 2rem;
+  background-color: #fff;
+}
+
+.donate-btn {
+  background: #e63946;
+  color: white;
+  padding: 1rem 2rem;
+  font-size: 1.2rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  display: inline-block;
+  transition: background 0.3s ease;
+}
+
+.donate-btn:hover {
+  background: #c92c3a;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  nav {
+    margin-top: 1rem;
+  }
+
+  .banner h1 {
+    font-size: 2rem;
+  }
+
+  .banner p {
+    font-size: 1rem;
+  }
 }
