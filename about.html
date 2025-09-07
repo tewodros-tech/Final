@@ -11,15 +11,16 @@
 <body>
   <header>
     <nav class="navbar">
-      <div class="logo"><img src="Logo.jpg" alt="HI•ME Logo" /></div>
+      <div class="logo"><a href="index.html"><img src="Logo.jpg" alt="HI•ME Logo" /></a></div>
+      <button class="menu-toggle" aria-label="Toggle Menu">☰</button>
       <ul class="nav-links">
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html" class="active">About</a></li>
         <li><a href="programs.html">Programs</a></li>
         <li><a href="gallery.html">Gallery</a></li>
         <li><a href="contact.html">Contact</a></li>
+        <li><a href="#donate" class="donate-btn">DONATE</a></li>
       </ul>
-      <a href="#donate" class="donate-btn">DONATE</a>
     </nav>
   </header>
 
@@ -51,5 +52,13 @@
       <a href="#"><i class="fab fa-linkedin-in"></i></a>
     </div>
   </footer>
+
+  <script>
+    const toggle = document.querySelector('.menu-toggle');
+    const navLinks = document.querySelector('.nav-links');
+    toggle.addEventListener('click', () => {
+      navLinks.classList.toggle('show');
+    });
+  </script>
 </body>
 </html>
