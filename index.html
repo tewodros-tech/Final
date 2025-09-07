@@ -1,19 +1,33 @@
-<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Hayimi Movement - Empowering Communities</title>
+
+  <!-- Fonts and Icons -->
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <!-- Main Stylesheet -->
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+
+  <!-- =========================
+       Header with Navigation
+  ========================== -->
   <header>
     <nav class="navbar">
-      <div class="logo"><a href="index.html"><img src="Logo.jpg" alt="HI•ME Logo" /></a></div>
+      <!-- Logo -->
+      <div class="logo">
+        <a href="index.html"><img src="Logo.jpg" alt="HI•ME Logo" /></a>
+      </div>
+
+      <!-- Mobile Menu Toggle -->
       <button class="menu-toggle" aria-label="Toggle Menu">☰</button>
+
+      <!-- Navigation Links -->
       <ul class="nav-links">
         <li><a href="index.html" class="active">Home</a></li>
         <li><a href="about.html">About Us</a></li>
@@ -25,12 +39,21 @@
     </nav>
   </header>
 
+  <!-- =========================
+       Hero Section with Background Image
+  ========================== -->
   <section class="hero">
-    <h1>Empowering Communities Through Culture & Compassion</h1>
-    <p>Hayimi Movement uplifts Ethiopian voices through storytelling, support, and action.</p>
-    <a href="about.html" class="learn-btn">Learn More</a>
+    <!-- Overlay container for text -->
+    <div class="hero-overlay">
+      <h1>Empowering Communities Through Culture & Compassion</h1>
+      <p>Hayimi Movement uplifts Ethiopian voices through storytelling, support, and action.</p>
+      <a href="about.html" class="learn-btn">Learn More</a>
+    </div>
   </section>
 
+  <!-- =========================
+       Footer
+  ========================== -->
   <footer class="footer">
     <p>&copy; 2025 Hayimi Movement. All rights reserved.</p>
     <div class="social-icons">
@@ -41,6 +64,9 @@
     </div>
   </footer>
 
+  <!-- =========================
+       JavaScript for Mobile Menu
+  ========================== -->
   <script>
     const toggle = document.querySelector('.menu-toggle');
     const navLinks = document.querySelector('.nav-links');
