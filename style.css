@@ -18,15 +18,15 @@ body {
    HEADER & NAVIGATION
 ================================ */
 
-/* Header container with deep blue gradient background matching HI•ME logo */
+/* Header container with exact logo background color */
 .header {
-  background: linear-gradient(to right, #0b1e3a, #1c3b5e); /* Logo-inspired tones */
+  background-color: #0b1e3a; /* Exact dark blue from HI•ME logo */
   color: white;
 }
 
-/* Logo banner with gradient and logo image positioned to the right */
+/* Logo banner with background image and solid blue */
 .logo-banner {
-  background: linear-gradient(to right, #0b1e3a, #1c3b5e);
+  background-color: #0b1e3a;
   background-image: url('Logo.jpg'); /* Replace with your actual logo filename */
   background-repeat: no-repeat;
   background-position: center right;
@@ -41,7 +41,7 @@ body {
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  background: transparent; /* Inherits gradient from header */
+  background: transparent;
 }
 
 /* Horizontal navigation links */
