@@ -5,24 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Gallery - Hayimi Movement</title>
   <link rel="stylesheet" href="style.css" />
-  <style>
-    .gallery-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 1rem;
-      padding: 2rem;
-    }
-    .gallery-grid img {
-      width: 100%;
-      border-radius: 8px;
-    }
-  </style>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 </head>
 <body>
 
   <!-- Navigation -->
   <nav class="navbar">
-    <div class="logo">Hayimi Movement</div>
+    <div class="logo"><img src="Logo.jpg" alt="Hayimi Logo" /></div>
     <ul class="nav-links">
       <li><a href="index.html">Home</a></li>
       <li><a href="about.html">About</a></li>
@@ -30,23 +19,30 @@
       <li><a href="gallery.html" class="active">Gallery</a></li>
       <li><a href="contact.html">Contact</a></li>
     </ul>
-    <button class="donate-btn">DONATE</button>
+    <a href="#donate" class="donate-btn">DONATE</a>
   </nav>
 
-  <!-- Gallery Content -->
-  <main class="page-content">
-    <h1>Gallery</h1>
+  <!-- Gallery Section -->
+  <main class="gallery">
+    <h1>Community Moments</h1>
     <div class="gallery-grid">
-      <img src="images/event1.jpg" alt="Community Event" />
-      <img src="images/workshop.jpg" alt="Youth Workshop" />
-      <img src="images/clinic.jpg" alt="Health Outreach" />
-      <img src="images/treeplanting.jpg" alt="Environmental Program" />
+      <img src="Childrens.jpg" alt="Children's Program" />
+      <img src="Gofa.jpg" alt="Gofa Community Event" />
+      <img src="Image1.jpg" alt="Cultural Showcase" />
     </div>
   </main>
 
   <!-- Footer -->
-  <footer>
-    <p>&copy; 2025 Hayimi Movement. All rights reserved.</p>
+  <footer class="footer">
+    <div class="footer-content">
+      <p>&copy; 2025 Hayimi Movement. All rights reserved.</p>
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+      </div>
+    </div>
   </footer>
 
 </body>
