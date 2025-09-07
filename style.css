@@ -15,14 +15,16 @@ body {
 }
 
 /* ================================
-   HEADER WITH LOGO BACKGROUND
+   HEADER & NAVIGATION
 ================================ */
+
+/* Header container with dark background */
 .header {
   background-color: #000;
   color: white;
 }
 
-/* Logo banner with background image */
+/* Logo banner with background image (hand + heart) */
 .logo-banner {
   background-color: #000;
   background-image: url('Logo.jpg'); /* Replace with your actual logo file */
@@ -40,13 +42,14 @@ body {
   flex-wrap: wrap;
 }
 
-/* Navigation links row */
+/* Horizontal navigation links */
 .nav-links {
   display: flex;
   gap: 1rem;
   list-style: none;
 }
 
+/* Individual link styling */
 .nav-links li a {
   color: #fff;
   text-decoration: none;
@@ -55,18 +58,20 @@ body {
   transition: background 0.3s ease;
 }
 
+/* Highlight active and hovered links */
 .nav-links li a:hover,
 .nav-links li a.active {
   background-color: #ff6600;
   border-radius: 5px;
 }
 
-/* Donate button with logo behind */
+/* Donate button wrapper to layer over logo background */
 .donate-wrapper {
   position: relative;
   z-index: 1;
 }
 
+/* Donate button styling */
 .donate-btn {
   background-color: #ff6600;
   color: white;
@@ -86,6 +91,8 @@ body {
 /* ================================
    HERO SECTION
 ================================ */
+
+/* Fullscreen hero section with background image */
 .hero {
   position: relative;
   height: 100vh;
@@ -97,12 +104,14 @@ body {
   color: white;
 }
 
+/* Dark overlay for text readability */
 .hero-overlay {
   position: absolute;
   inset: 0;
   background: rgba(0, 0, 0, 0.5);
 }
 
+/* Content inside hero section */
 .hero-content {
   position: relative;
   z-index: 1;
@@ -120,6 +129,7 @@ body {
   margin-bottom: 2rem;
 }
 
+/* Learn More button */
 .learn-btn {
   background: #fff;
   color: #ff6600;
@@ -138,6 +148,8 @@ body {
 /* ================================
    FOOTER
 ================================ */
+
+/* Footer layout and styling */
 .footer {
   background-color: #111;
   color: #ccc;
@@ -150,6 +162,7 @@ body {
   margin: auto;
 }
 
+/* Social media icon styling */
 .social-icons a {
   color: #ccc;
   margin: 0 0.5rem;
@@ -164,6 +177,8 @@ body {
 /* ================================
    RESPONSIVE DESIGN
 ================================ */
+
+/* Adjust layout for smaller screens */
 @media (max-width: 768px) {
   .hero h1 {
     font-size: 2rem;
