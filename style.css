@@ -1,41 +1,207 @@
 /* =========================
-   Hero Section with Full Background Image
+   Base Styles
 ========================= */
-.hero {
-  position: relative;
-  height: 100vh; /* Full screen height */
-  background: url('hero-bg.jpg') center/cover no-repeat; /* Replace with your actual image filename */
+body {
+  margin: 0;
+  font-family: 'Open Sans', sans-serif;
+  background-color: #fdfaf3;
+  color: #333;
+}
+
+/* =========================
+   Navigation Bar
+========================= */
+.navbar {
   display: flex;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  text-align: center;
+  background-color: #0072c6; /* Hayimi blue */
+  padding: 10px 20px;
+  flex-wrap: wrap;
+}
+
+.logo img {
+  height: 50px;
+}
+
+/* Navigation Links */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Active Link */
+.nav-links a.active {
+  background-color: white;
+  color: #0072c6;
+  padding: 6px 12px;
+  border-radius: 4px;
+}
+
+/* =========================
+   DONATE Button Styling
+========================= */
+.donate-btn {
+  background-color: #0072c6; /* Hayimi blue background */
+  color: white;
+  padding: 8px 16px;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: bold;
+  font-family: 'Poppins', sans-serif;
+  transition: background-color 0.3s ease;
+  display: inline-block;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1); /* Subtle shadow */
+}
+
+.donate-btn:hover {
+  background-color: #005fa3; /* Darker blue on hover */
+}
+
+/* =========================
+   Mobile Menu Toggle
+========================= */
+.menu-toggle {
+  display: none;
+  font-size: 24px;
+  background: none;
+  border: none;
   color: white;
 }
 
-/* Overlay to darken image and improve text readability */
-.hero::before {
-  content: "";
-  position: absolute;
-  top: 0; left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
-  z-index: 1;
+/* =========================
+   Hero Section (No Background Image)
+========================= */
+.hero {
+  text-align: center;
+  padding: 60px 20px;
+  background-color: #0072c6; /* Hayimi blue background */
+  color: white;
 }
 
-/* Text container above overlay */
-.hero-overlay {
-  position: relative;
-  z-index: 2;
+.learn-btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 24px;
+  background-color: white;
+  color: #0072c6;
+  text-decoration: none;
+  border-radius: 4px;
+  font-weight: bold;
+}
+
+.learn-btn:hover {
+  background-color: #aad4ff; /* Light blue hover */
+  color: #005fa3;
+}
+
+/* =========================
+   Footer
+========================= */
+.footer {
+  background-color: #0072c6;
+  color: white;
+  text-align: center;
   padding: 20px;
 }
 
-.hero-overlay h1 {
-  font-size: 2.5rem;
-  margin-bottom: 10px;
+.social-icons a {
+  margin: 0 10px;
+  color: white;
+  font-size: 18px;
 }
 
-.hero-overlay p {
-  font-size: 1.2rem;
-  margin-bottom: 20px;
+.social-icons a:hover {
+  color: #aad4ff;
+}
+
+/* =========================
+   Content Sections
+========================= */
+.about-section,
+.page-content,
+.gallery {
+  padding: 40px 20px;
+  max-width: 900px;
+  margin: auto;
+}
+
+/* =========================
+   Gallery Grid
+========================= */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.gallery-grid img {
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+/* =========================
+   Contact Section
+========================= */
+.contact-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.contact-info,
+.contact-form {
+  flex: 1;
+  min-width: 280px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.contact-form button {
+  padding: 12px;
+  background-color: #0072c6;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.contact-form button:hover {
+  background-color: #005fa3;
+}
+
+/* =========================
+   Responsive Styles
+========================= */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: #0072c6;
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
 }
