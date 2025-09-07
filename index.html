@@ -12,41 +12,60 @@
 </head>
 <body>
 
-  <!-- Header with Navigation -->
-  <header>
-    <nav class="navbar">
-      <div class="logo">
-        <a href="index.html"><img src="Logo.jpg" alt="Hayimi Logo" /></a>
-      </div>
-      <button class="menu-toggle" aria-label="Toggle Menu">☰</button>
-      <ul class="nav-links">
-        <li><a href="index.html" class="active">Home</a></li>
-        <li><a href="about.html">About Us</a></li>
+  <!-- =========================
+       Animated Navigation Header
+  ========================== -->
+  <header class="nav-header">
+    <div class="logo">
+      <a href="index.html"><img src="Logo.jpg" alt="Hayimi Logo" /></a>
+    </div>
+
+    <!-- Hamburger Icon -->
+    <div class="hamburger" id="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+    <!-- Fullscreen Navigation Menu -->
+    <nav class="nav-menu" id="navMenu">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
         <li><a href="programs.html">Programs</a></li>
         <li><a href="gallery.html">Gallery</a></li>
-        <li><a href="contact.html">Contact Us</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="donation.html" class="donate-btn">DONATE</a></li>
       </ul>
     </nav>
   </header>
 
-  <!-- Hero Section -->
+  <!-- =========================
+       Hero Section
+  ========================== -->
   <section class="hero">
     <h1>Empowering Communities Through Culture & Compassion</h1>
     <p>Hayimi Movement uplifts Ethiopian voices through storytelling, support, and action.</p>
     <a href="about.html" class="learn-btn">Learn More</a>
   </section>
 
-  <!-- Footer -->
+  <!-- =========================
+       Footer
+  ========================== -->
   <footer class="footer">
     <p>&copy; 2025 Hayimi Movement. All rights reserved.</p>
   </footer>
 
-  <!-- Mobile Menu Script -->
+  <!-- =========================
+       JavaScript for Menu Toggle
+  ========================== -->
   <script>
-    const toggle = document.querySelector('.menu-toggle');
-    const navLinks = document.querySelector('.nav-links');
-    toggle.addEventListener('click', () => {
-      navLinks.classList.toggle('show');
+    const hamburger = document.getElementById('hamburger');
+    const navMenu = document.getElementById('navMenu');
+
+    hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('active');
+      navMenu.classList.toggle('active');
     });
   </script>
 </body>
