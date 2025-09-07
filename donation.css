@@ -1,4 +1,6 @@
-/* thank-you.css */
+/* donation.css */
+
+/* Base styles */
 body {
   font-family: 'Open Sans', sans-serif;
   margin: 0;
@@ -6,37 +8,45 @@ body {
   color: #333;
 }
 
-.thank-you-hero {
-  background: url('thankyou-bg.jpg') center/cover no-repeat;
+/* Hero section */
+.donation-hero {
+  background: url('donation-bg.jpg') center/cover no-repeat;
   padding: 60px 20px;
   text-align: center;
   color: white;
-  background-color: #000000a0;
+  background-color: #000000a0; /* Overlay for readability */
 }
 
-.thank-you-content {
-  max-width: 600px;
-  margin: 40px auto;
-  padding: 20px;
+/* Donation options layout */
+.donation-options {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  padding: 40px 20px;
+}
+
+/* Individual donation box */
+.donation-box {
   background: white;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  padding: 20px;
+  max-width: 400px;
+  flex: 1;
 }
 
-.thank-you-content ul {
-  padding-left: 20px;
-}
-
-.home-button {
+/* CBE button styling */
+.cbe-button {
   display: inline-block;
-  margin-top: 20px;
-  padding: 12px 24px;
-  background-color: #e4572e;
+  margin-top: 15px;
+  padding: 10px 20px;
+  background-color: #0072c6; /* Changed from orange to Hayimi blue */
   color: white;
   text-decoration: none;
   border-radius: 4px;
 }
 
-.home-button:hover {
-  background-color: #c9441f;
+.cbe-button:hover {
+  background-color: #005fa3; /* Darker blue on hover */
 }
