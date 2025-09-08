@@ -3,33 +3,38 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Programs - Hayimi Movement</title>
+  <title>Programs | Hayimi Movement</title>
 
-  <!-- Fonts and Icons -->
+  <!-- Fonts & Icons -->
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 
-  <!-- Main Stylesheet -->
-  <link rel="stylesheet" href="style.css" />
+  <!-- Modular CSS -->
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/navbar.css" />
+  <link rel="stylesheet" href="css/content.css" />
+  <link rel="stylesheet" href="css/footer.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
 </head>
 <body>
-  <!-- Header with Responsive Navbar -->
+
+  <!-- Header & Navigation -->
   <header>
     <nav class="navbar">
-      <div class="logo"><a href="index.html"><img src="Logo.jpg" alt="HI•ME Logo" /></a></div>
-
-      <!-- Mobile Menu Toggle Button -->
+      <div class="logo">
+        <a href="index.html"><img src="images/Logo.png" alt="Hayimi Logo" /></a>
+      </div>
       <button class="menu-toggle" aria-label="Toggle Menu">☰</button>
-
-      <!-- Navigation Links -->
-      <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="programs.html" class="active">Programs</a></li>
-        <li><a href="gallery.html">Gallery</a></li>
-        <li><a href="contact.html">Contact</a></li>
-        <li><a href="#donate" class="donate-btn">DONATE</a></li>
-      </ul>
+      <nav class="nav-menu">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="programs.html" class="active">Programs</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="donation.html" class="donate-btn">Donate</a></li>
+        </ul>
+      </nav>
     </nav>
   </header>
 
@@ -79,13 +84,7 @@
     </div>
   </footer>
 
-  <!-- JavaScript for Mobile Menu Toggle -->
-  <script>
-    const toggle = document.querySelector('.menu-toggle');
-    const navLinks = document.querySelector('.nav-links');
-    toggle.addEventListener('click', () => {
-      navLinks.classList.toggle('show');
-    });
-  </script>
+  <!-- JavaScript -->
+  <script src="js/main.js"></script>
 </body>
 </html>
