@@ -1,22 +1,24 @@
-/* home.css */
+/* style.css */
 
-/* 🔷 Hero section background and layout */
+/* 🔷 HERO SECTION STYLES */
+
+/* Full-width hero section with centered content */
 .hero-section {
-  background-color: #0057b8; /* Deep blue */
+  background-color: #0057b8; /* Deep blue background */
   color: white;
   text-align: center;
   padding: 100px 20px;
   font-family: 'Open Sans', sans-serif;
 }
 
-/* 🧭 Headline styling */
+/* Headline styling */
 .hero-content h2 {
   font-size: 2.5rem;
   font-family: 'Poppins', sans-serif;
   margin-bottom: 20px;
 }
 
-/* 📖 Paragraph styling */
+/* Supporting paragraph styling */
 .hero-content p {
   font-size: 1.2rem;
   max-width: 600px;
@@ -24,7 +26,9 @@
   line-height: 1.6;
 }
 
-/* 🔘 Call-to-action button */
+/* 🔘 CALL-TO-ACTION BUTTON STYLES */
+
+/* Default button appearance */
 .cta-button {
   display: inline-block;
   background-color: white;
@@ -36,7 +40,27 @@
   transition: background-color 0.3s ease;
 }
 
-/* 🖱️ Button hover effect */
+/* Hover effect for button */
 .cta-button:hover {
   background-color: #e0e0e0;
+}
+
+/* 🧭 OPTIONAL: Responsive tweaks for smaller screens */
+@media (max-width: 768px) {
+  .hero-section {
+    padding: 60px 15px;
+  }
+
+  .hero-content h2 {
+    font-size: 2rem;
+  }
+
+  .hero-content p {
+    font-size: 1rem;
+  }
+
+  .cta-button {
+    padding: 10px 20px;
+    font-size: 0.95rem;
+  }
 }
