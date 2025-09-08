@@ -1,19 +1,49 @@
-<!-- donation.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Donate | Hayimi Movement</title>
+
+  <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="donation.css" />
+
+  <!-- Modular CSS -->
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/navbar.css" />
+  <link rel="stylesheet" href="css/donation-base.css" />
+  <link rel="stylesheet" href="css/donation-hero.css" />
+  <link rel="stylesheet" href="css/donation-layout.css" />
+  <link rel="stylesheet" href="css/donation-buttons.css" />
+  <link rel="stylesheet" href="css/footer.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
 </head>
 <body>
+
+  <!-- Header & Navigation -->
+  <header class="navbar">
+    <div class="logo">
+      <a href="index.html"><img src="images/Logo.png" alt="Hayimi Logo" /></a>
+    </div>
+    <button class="menu-toggle" aria-label="Toggle Menu">☰</button>
+    <nav class="nav-menu">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="programs.html">Programs</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="donation.html" class="active donate-btn">Donate</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
   <section class="donation-hero">
     <h1>Support the Hayimi Movement</h1>
     <p>Choose your preferred method to contribute and uplift Ethiopian voices.</p>
   </section>
 
+  <!-- Donation Options -->
   <section class="donation-options">
     <!-- PayPal Option -->
     <div class="donation-box">
@@ -35,12 +65,17 @@
     </div>
   </section>
 
+  <!-- Footer -->
+  <footer class="footer">
+    <p>&copy; 2025 Hayimi Movement. All rights reserved.</p>
+  </footer>
+
   <!-- PayPal SDK -->
   <script src="https://www.paypalobjects.com/donate/sdk/donate-sdk.js" charset="UTF-8"></script>
   <script>
     PayPal.Donation.Button({
       env: 'production',
-      hosted_button_id: 'YOUR_HOSTED_BUTTON_ID',
+      hosted_button_id: 'YOUR_HOSTED_BUTTON_ID', // Replace with your actual PayPal button ID
       image: {
         src: 'https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif',
         title: 'Donate with PayPal',
@@ -51,5 +86,8 @@
       }
     }).render('#paypal-donate-button-container');
   </script>
+
+  <!-- JavaScript -->
+  <script src="js/main.js"></script>
 </body>
 </html>
