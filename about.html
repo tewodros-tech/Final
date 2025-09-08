@@ -1,67 +1,37 @@
-<!-- about.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>About Us - Hayimi Movement</title>
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <title>About Us | Hayimi Movement</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header>
-    <nav class="navbar">
-      <div class="logo"><a href="index.html"><img src="Logo.jpg" alt="HI•ME Logo" /></a></div>
-      <button class="menu-toggle" aria-label="Toggle Menu">☰</button>
-      <ul class="nav-links">
+  <header class="navbar">
+    <div class="logo"><img src="Logo.jpg" alt="Hayimi Logo" /></div>
+    <nav>
+      <ul>
         <li><a href="index.html">Home</a></li>
-        <li><a href="about.html" class="active">About</a></li>
-        <li><a href="programs.html">Programs</a></li>
-        <li><a href="gallery.html">Gallery</a></li>
-        <li><a href="contact.html">Contact</a></li>
-        <li><a href="donation.html" class="donate-btn">DONATE</a></li>
+        <li><a href="donate.html" class="donate-btn">Donate Today</a></li>
       </ul>
     </nav>
   </header>
 
-  <section class="about-section">
+  <section class="hero">
     <h1>About Hayimi Movement</h1>
     <p>Spreading love and hope to families in need—through compassion, resilience, and community-driven action.</p>
+  </section>
 
+  <main class="content">
     <h2>Our Mission</h2>
-    <p>Hayimi Movement is a grassroots initiative rooted in Ethiopia, committed to empowering communities through education, health, and humanitarian support.</p>
-
-    <h2>What We Do</h2>
-    <ul>
-      <li>💛 Supporting Displaced People & Disabilities</li>
-      <li>🍲 Food Support</li>
-      <li>📚 School Materials</li>
-      <li>💊 Life-Saving Medications</li>
-    </ul>
+    <p>Empowering communities through education, health, and humanitarian support.</p>
 
     <h2>Our Vision</h2>
     <p>A future where every child learns freely, every family thrives, and every community rises with strength.</p>
-
-    <a href="donation.html" class="learn-btn">Join the Movement</a>
-  </section>
+  </main>
 
   <footer class="footer">
     <p>&copy; 2025 Hayimi Movement. All rights reserved.</p>
-    <div class="social-icons">
-      <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-      <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-      <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-      <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-    </div>
   </footer>
-
-  <script>
-    const toggle = document.querySelector('.menu-toggle');
-    const navLinks = document.querySelector('.nav-links');
-    toggle.addEventListener('click', () => {
-      navLinks.classList.toggle('show');
-    });
-  </script>
 </body>
 </html>
