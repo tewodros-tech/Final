@@ -1,37 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- ✅ Basic Page Setup -->
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Events | Hayimi Movement</title>
-  <link rel="stylesheet" href="style.css" />
+
+  <!-- ✅ Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@600&display=swap" rel="stylesheet" />
+
+  <!-- ✅ Modular CSS Stylesheets -->
+  <link rel="stylesheet" href="css/base.css" />         <!-- Base styles -->
+  <link rel="stylesheet" href="css/navbar.css" />       <!-- Navigation bar styles -->
+  <link rel="stylesheet" href="css/events.css" />       <!-- Events page-specific styles -->
+  <link rel="stylesheet" href="css/responsive.css" />   <!-- Responsive layout -->
 </head>
 <body>
+
+  <!-- 🔷 HEADER: Reusable Navigation -->
   <header class="navbar">
-    <div class="logo"><img src="Logo.jpg" alt="Hayimi Logo" /></div>
-    <nav>
+    <div class="logo">
+      <h1>Hayimi Movement</h1>
+    </div>
+    <nav class="nav-menu">
       <ul>
         <li><a href="index.html">Home</a></li>
-        <li><a href="donate.html" class="donate-btn">Donate Today</a></li>
+        <li><a href="programs.html">Programs</a></li>
+        <li><a href="donation.html">Donate</a></li>
+        <li><a href="events.html">Events</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="contact.html">Contact</a></li>
       </ul>
     </nav>
   </header>
 
-  <section class="hero">
-    <h1>Upcoming Events</h1>
-    <p>Join us in celebrating community, culture, and compassion.</p>
-  </section>
+  <!-- 📅 EVENTS SECTION: Upcoming Activities -->
+  <main class="events-section">
+    <h2>Upcoming Events</h2>
+    <p>Join us in celebrating culture, compassion, and community action.</p>
 
-  <main class="content">
-    <article>
-      <h2>Pride in the Park</h2>
-      <p>A vibrant celebration of inclusion, joy, and community support. Music, food, and storytelling from local voices.</p>
-      <a href="donate.html" class="learn-btn">Support This Event</a>
-    </article>
+    <!-- 🗓️ Event Cards -->
+    <div class="event-grid">
+      <div class="event-card">
+        <h3>Community Food Drive</h3>
+        <p class="date">September 15, 2025</p>
+        <p>Help us distribute food packages to displaced families in Addis Ababa.</p>
+      </div>
+
+      <div class="event-card">
+        <h3>Storytelling Night</h3>
+        <p class="date">October 5, 2025</p>
+        <p>Celebrate Ethiopian heritage through music, poetry, and personal stories.</p>
+      </div>
+
+      <div class="event-card">
+        <h3>Medical Outreach</h3>
+        <p class="date">October 20, 2025</p>
+        <p>Volunteer with us to provide life-saving medication and health screenings.</p>
+      </div>
+    </div>
   </main>
 
+  <!-- ⚫ FOOTER: Reusable -->
   <footer class="footer">
     <p>&copy; 2025 Hayimi Movement. All rights reserved.</p>
   </footer>
+
+  <!-- 📜 JavaScript File -->
+  <script src="js/script.js" defer></script>
 </body>
 </html>
