@@ -1,0 +1,47 @@
+/* programs.css */
+
+.programs-section {
+  padding: 80px 20px;
+  text-align: center;
+  background-color: #f9f9f9;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.programs-section h2 {
+  font-size: 2.2rem;
+  font-family: 'Poppins', sans-serif;
+  color: #003f88;
+  margin-bottom: 10px;
+}
+
+.programs-section p {
+  font-size: 1.1rem;
+  color: #555;
+  margin-bottom: 40px;
+}
+
+.program-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.program-card {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease;
+}
+
+.program-card:hover {
+  transform: translateY(-5px);
+}
+
+.program-card h3 {
+  font-size: 1.4rem;
+  color: #0057b8;
+  margin-bottom: 10px;
+}
