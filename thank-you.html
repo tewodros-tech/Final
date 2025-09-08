@@ -1,40 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- ✅ Basic Page Setup -->
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Thank You | Hayimi Movement</title>
 
-  <!-- Fonts -->
+  <!-- ✅ Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@600&display=swap" rel="stylesheet" />
 
-  <!-- Modular CSS -->
-  <link rel="stylesheet" href="css/thankyou-base.css" />
-  <link rel="stylesheet" href="css/thankyou-hero.css" />
-  <link rel="stylesheet" href="css/thankyou-content.css" />
-  <link rel="stylesheet" href="css/thankyou-buttons.css" />
+  <!-- ✅ Modular CSS Stylesheets -->
+  <link rel="stylesheet" href="css/base.css" />         <!-- Base styles -->
+  <link rel="stylesheet" href="css/navbar.css" />       <!-- Navigation bar styles -->
+  <link rel="stylesheet" href="css/thank-you.css" />    <!-- Thank-you page styles -->
+  <link rel="stylesheet" href="css/responsive.css" />   <!-- Responsive layout -->
 </head>
 <body>
 
-  <!-- Hero Section -->
-  <section class="thank-you-hero">
-    <h1>Amasegenallo — Thank You!</h1>
-    <p>Your support uplifts Ethiopian voices and fuels meaningful change.</p>
-  </section>
+  <!-- 🔷 HEADER: Reusable Navigation -->
+  <header class="navbar">
+    <div class="logo">
+      <h1>Hayimi Movement</h1>
+    </div>
+    <nav class="nav-menu">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="programs.html">Programs</a></li>
+        <li><a href="donation.html">Donate</a></li>
+        <li><a href="events.html">Events</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
 
-  <!-- Content Section -->
-  <section class="thank-you-content">
-    <p>We’ve received your donation and are deeply grateful for your generosity. Every contribution helps us amplify stories, support communities, and build a brighter future.</p>
+  <!-- 🙏 THANK-YOU SECTION -->
+  <main class="thank-you-section">
+    <div class="thank-you-content">
+      <h2>Thank You!</h2>
+      <p>Your support means the world to us. Together, we’re building a more compassionate and empowered future for Ethiopian communities.</p>
+      <a href="index.html" class="home-button">Return to Homepage</a>
+    </div>
+  </main>
 
-    <p>If you’d like to stay involved, consider:</p>
-    <ul>
-      <li>📬 <strong>Subscribing</strong> to our newsletter</li>
-      <li>📸 <strong>Following</strong> us on social media</li>
-      <li>🤝 <strong>Volunteering</strong> or sharing your story</li>
-    </ul>
+  <!-- ⚫ FOOTER: Reusable -->
+  <footer class="footer">
+    <p>&copy; 2025 Hayimi Movement. All rights reserved.</p>
+  </footer>
 
-    <a href="index.html" class="home-button">Return to Homepage</a>
-  </section>
-
+  <!-- 📜 JavaScript File -->
+  <script src="js/script.js" defer></script>
 </body>
 </html>
