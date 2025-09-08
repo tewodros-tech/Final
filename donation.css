@@ -1,52 +1,48 @@
 /* donation.css */
 
-/* Base styles */
-body {
+/* 💛 Donation section layout */
+.donation-section {
+  background-color: #f4f4f4;
+  padding: 80px 20px;
+  text-align: center;
   font-family: 'Open Sans', sans-serif;
-  margin: 0;
-  background: #fffaf3;
+}
+
+/* Headline styling */
+.donation-content h2 {
+  font-size: 2.2rem;
+  font-family: 'Poppins', sans-serif;
+  margin-bottom: 20px;
+  color: #003f88;
+}
+
+/* Paragraph styling */
+.donation-content p {
+  font-size: 1.1rem;
+  max-width: 600px;
+  margin: 0 auto 40px;
+  line-height: 1.6;
   color: #333;
 }
 
-/* Hero section */
-.donation-hero {
-  background: url('donation-bg.jpg') center/cover no-repeat;
-  padding: 60px 20px;
-  text-align: center;
-  color: white;
-  background-color: #000000a0; /* Overlay for readability */
-}
-
-/* Donation options layout */
+/* 💳 Donation buttons */
 .donation-options {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 30px;
-  padding: 40px 20px;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center;
 }
 
-/* Individual donation box */
-.donation-box {
-  background: white;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
-  padding: 20px;
-  max-width: 400px;
-  flex: 1;
-}
-
-/* CBE button styling */
-.cbe-button {
-  display: inline-block;
-  margin-top: 15px;
-  padding: 10px 20px;
-  background-color: #0072c6; /* Changed from orange to Hayimi blue */
+.donate-button {
+  background-color: #0057b8;
   color: white;
+  padding: 12px 24px;
   text-decoration: none;
-  border-radius: 4px;
+  font-weight: bold;
+  border-radius: 6px;
+  transition: background-color 0.3s ease;
 }
 
-.cbe-button:hover {
-  background-color: #005fa3; /* Darker blue on hover */
+.donate-button:hover {
+  background-color: #003f88;
 }
