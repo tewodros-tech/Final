@@ -1,43 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- 🔹 Basic Page Setup -->
+  <!-- 🔹 Meta & Title -->
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Hayimi Movement</title>
 
-  <!-- 🔹 Google Fonts: Poppins for clean, modern typography -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
-
-  <!-- 🔹 External CSS Stylesheet -->
+  <!-- 🔹 Fonts & Styles -->
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-  <!-- 🔹 Responsive Navigation Bar -->
-  <header class="navbar">
-    <div class="logo">HI•ME</div>
-    <nav class="nav-links" id="nav-links">
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="programs.html">Programs</a>
-      <a href="gallery.html">Gallery</a>
-      <a href="contact.html">Contact</a>
-      <a href="donation.html" class="donate-btn">Donate</a>
-    </nav>
-    <div class="menu-toggle" id="menu-toggle">
+  <!-- 🔹 Navigation Header -->
+  <header class="nav-header">
+    <div class="logo">
+      <!-- Replace with your actual logo path -->
+      <img src="logo.png" alt="Hayimi Movement Logo" />
+    </div>
+    <div class="hamburger" id="hamburger">
       <span></span><span></span><span></span>
     </div>
+    <nav class="nav-menu" id="nav-menu">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="programs.html">Programs</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="donation.html" class="donate-btn">Donate</a></li>
+      </ul>
+    </nav>
   </header>
 
-  <!-- 🔹 Hero Section: Mission Message & CTA -->
+  <!-- 🔹 Hero Section -->
   <section class="hero">
     <h1>Empowering Communities Through Culture & Compassion</h1>
     <p>Hayimi Movement uplifts Ethiopian voices through storytelling, support, and action.</p>
-    <a href="about.html" class="cta-button">Learn More</a>
+    <a href="about.html" class="learn-btn">Learn More</a>
   </section>
 
-  <!-- 🔹 Informational Sections (Optional for Homepage) -->
+  <!-- 🔹 Informational Sections -->
   <main>
     <section id="about">
       <h2>About Hayimi Movement</h2>
@@ -58,12 +61,20 @@
     </section>
   </main>
 
-  <!-- 🔹 Footer Section -->
+  <!-- 🔹 Footer -->
   <footer class="footer">
     <p>© 2025 Hayimi Movement. All rights reserved.</p>
   </footer>
 
-  <!-- 🔹 External JavaScript for Mobile Menu Toggle -->
-  <script src="script.js"></script>
+  <!-- 🔹 JavaScript for Menu Toggle -->
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const navMenu = document.getElementById('nav-menu');
+
+    hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('active');
+      navMenu.classList.toggle('active');
+    });
+  </script>
 </body>
 </html>
