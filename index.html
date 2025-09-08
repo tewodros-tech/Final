@@ -1,28 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- Basic page setup -->
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Hayimi Movement</title>
 
-  <!-- Fonts -->
+  <!-- Fonts for branding and readability -->
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@600&display=swap" rel="stylesheet" />
 
-  <!-- Modular CSS -->
-  <link rel="stylesheet" href="css/base.css" />
-  <link rel="stylesheet" href="css/navbar.css" />
-  <link rel="stylesheet" href="css/hero.css" />
-  <link rel="stylesheet" href="css/footer.css" />
-  <link rel="stylesheet" href="css/responsive.css" />
+  <!-- Modular CSS files -->
+  <link rel="stylesheet" href="css/base.css" />           <!-- Global styles -->
+  <link rel="stylesheet" href="css/navbar.css" />         <!-- Navigation bar -->
+  <link rel="stylesheet" href="css/hero.css" />           <!-- Hero section -->
+  <link rel="stylesheet" href="css/footer.css" />         <!-- Footer layout -->
+  <link rel="stylesheet" href="css/responsive.css" />     <!-- Mobile responsiveness -->
+  <link rel="stylesheet" href="css/animations.css" />     <!-- Optional animations -->
 </head>
 <body>
 
-  <!-- Header & Navigation -->
+  <!-- Header with logo and navigation -->
   <header class="navbar">
     <div class="logo">
+      <!-- Logo image (use transparent PNG or SVG for best results) -->
       <a href="index.html"><img src="images/Logo.png" alt="Hayimi Logo" /></a>
     </div>
+
+    <!-- Hamburger button for mobile toggle -->
     <button class="menu-toggle" aria-label="Toggle Menu">☰</button>
+
+    <!-- Navigation menu -->
     <nav class="nav-menu">
       <ul>
         <li><a href="about.html">About</a></li>
@@ -34,21 +41,23 @@
     </nav>
   </header>
 
-  <!-- Hero Section -->
+  <!-- Hero section with image and call-to-action -->
   <section class="hero">
     <img src="images/Image1.jpg" alt="Pride in the Park" />
-    <div class="hero-text">
+
+    <!-- Text overlay with animation class -->
+    <div class="hero-text fade-in-up">
       <h1>Pride in the Park</h1>
       <a href="events.html" class="learn-btn">Learn More</a>
     </div>
   </section>
 
-  <!-- Footer -->
+  <!-- Footer with copyright -->
   <footer class="footer">
     <p>&copy; 2025 Hayimi Movement. All rights reserved.</p>
   </footer>
 
-  <!-- JavaScript -->
+  <!-- JavaScript for menu toggle and future interactivity -->
   <script src="js/main.js"></script>
 </body>
 </html>
