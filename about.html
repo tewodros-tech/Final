@@ -4,12 +4,24 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>About Us | Hayimi Movement</title>
+
+  <!-- Link to external stylesheet -->
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+
+  <!-- Header with logo and responsive navigation -->
   <header class="navbar">
-    <div class="logo"><img src="Logo.jpg" alt="Hayimi Logo" /></div>
-    <nav>
+    <div class="logo">
+      <!-- Use transparent PNG or SVG for better visual integration -->
+      <img src="Logo.png" alt="Hayimi Logo" />
+    </div>
+
+    <!-- Hamburger menu toggle for mobile -->
+    <button class="menu-toggle" aria-label="Toggle Menu">&#9776;</button>
+
+    <!-- Navigation menu -->
+    <nav class="nav-menu">
       <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="donate.html" class="donate-btn">Donate Today</a></li>
@@ -17,11 +29,13 @@
     </nav>
   </header>
 
+  <!-- Hero section with mission statement -->
   <section class="hero">
     <h1>About Hayimi Movement</h1>
     <p>Spreading love and hope to families in need—through compassion, resilience, and community-driven action.</p>
   </section>
 
+  <!-- Main content with mission and vision -->
   <main class="content">
     <h2>Our Mission</h2>
     <p>Empowering communities through education, health, and humanitarian support.</p>
@@ -30,8 +44,20 @@
     <p>A future where every child learns freely, every family thrives, and every community rises with strength.</p>
   </main>
 
+  <!-- Footer -->
   <footer class="footer">
     <p>&copy; 2025 Hayimi Movement. All rights reserved.</p>
   </footer>
+
+  <!-- JavaScript for menu toggle -->
+  <script>
+    // Toggle navigation menu on mobile
+    const toggle = document.querySelector('.menu-toggle');
+    const navMenu = document.querySelector('.nav-menu');
+
+    toggle.addEventListener('click', () => {
+      navMenu.classList.toggle('open');
+    });
+  </script>
 </body>
 </html>
