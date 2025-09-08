@@ -1,63 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Basic page setup -->
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Hayimi Movement</title>
+  <title>Hi-Me Movement</title>
 
-  <!-- Fonts for branding and readability -->
+  <!-- Fonts and styles -->
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@600&display=swap" rel="stylesheet" />
-
-  <!-- Modular CSS files -->
-  <link rel="stylesheet" href="css/base.css" />           <!-- Global styles -->
-  <link rel="stylesheet" href="css/navbar.css" />         <!-- Navigation bar -->
-  <link rel="stylesheet" href="css/hero.css" />           <!-- Hero section -->
-  <link rel="stylesheet" href="css/footer.css" />         <!-- Footer layout -->
-  <link rel="stylesheet" href="css/responsive.css" />     <!-- Mobile responsiveness -->
-  <link rel="stylesheet" href="css/animations.css" />     <!-- Optional animations -->
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/navbar.css" />
+  <link rel="stylesheet" href="css/home.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
 </head>
 <body>
 
-  <!-- Header with logo and navigation -->
+  <!-- Header -->
   <header class="navbar">
-    <div class="logo">
-      <!-- Logo image (use transparent PNG or SVG for best results) -->
-      <a href="index.html"><img src="images/Logo.png" alt="Hayimi Logo" /></a>
+    <div class="branding">
+      <h1>Hi-Me Movement</h1>
+      <p class="tagline">Spreading Love and Hope to Families in Need: Empowering Internally Displaced People and Individuals with Disabilities</p>
     </div>
-
-    <!-- Hamburger button for mobile toggle -->
-    <button class="menu-toggle" aria-label="Toggle Menu">☰</button>
-
-    <!-- Navigation menu -->
     <nav class="nav-menu">
       <ul>
-        <li><a href="about.html">About</a></li>
-        <li><a href="events.html">Events</a></li>
-        <li><a href="volunteer.html">Volunteer</a></li>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="programs.html">Programs</a></li>
         <li><a href="contact.html">Contact</a></li>
-        <li><a href="donation.html" class="donate-btn">Donate Today</a></li>
       </ul>
     </nav>
   </header>
 
-  <!-- Hero section with image and call-to-action -->
-  <section class="hero">
-    <img src="images/Image1.jpg" alt="Pride in the Park" />
+  <!-- Main content -->
+  <main>
+    <!-- Welcome Message -->
+    <section class="welcome">
+      <h2>Welcome to the Hi-Me Movement</h2>
+      <p>
+        We are a community-driven initiative bringing hope, resources, and compassion to families impacted by conflict, displacement, poverty, and disability. 
+        Operating from Ethiopia to North America, we unite people from all walks of life to uplift one another through acts of service.
+      </p>
+    </section>
 
-    <!-- Text overlay with animation class -->
-    <div class="hero-text fade-in-up">
-      <h1>Pride in the Park</h1>
-      <a href="events.html" class="learn-btn">Learn More</a>
-    </div>
-  </section>
+    <!-- Program Highlights -->
+    <section class="programs">
+      <div class="program-box">
+        <h3>🍱 Emergency Food Distribution</h3>
+        <p>Delivering food packages to families facing food insecurity during crises and displacement.</p>
+      </div>
+      <div class="program-box">
+        <h3>📚 Educational Support for Children</h3>
+        <p>Providing school supplies, tuition support, and mentorship to displaced and underserved children.</p>
+      </div>
+      <div class="program-box">
+        <h3>💊 Access to Life-saving Medication</h3>
+        <p>Ensuring critical medical support and access to prescriptions for those in need.</p>
+      </div>
+    </section>
+  </main>
 
-  <!-- Footer with copyright -->
+  <!-- Footer -->
   <footer class="footer">
-    <p>&copy; 2025 Hayimi Movement. All rights reserved.</p>
+    <p>&copy; 2025 Hi-Me Movement. All rights reserved.</p>
   </footer>
 
-  <!-- JavaScript for menu toggle and future interactivity -->
-  <script src="js/main.js"></script>
+  <!-- Scripts -->
+  <script src="js/main.js" defer></script>
 </body>
 </html>
